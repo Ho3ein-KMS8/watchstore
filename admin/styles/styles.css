@@ -1,0 +1,404 @@
+/* General Styles */
+@font-face {
+    font-family: Roboto;
+    src: url("../../fonts/RobotoCondensed-Bold.ttf");
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.success-message,
+.error-message {
+    display: none;
+}
+
+/* Login page */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+main #login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw;
+    border: 1px solid gray;
+    padding: 2rem;
+}
+main #login-page h1 {
+    color: white;
+}
+main #login-page form {
+    width: 100%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main #login-page form input {
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    color: white;
+    outline: none;
+    margin: 2vh 0;
+    padding: .7rem .4rem;
+    width: 100%;
+}
+main #login-page form input[type="submit"] {
+    transition: all .5s linear;
+    width: 100%;
+}
+main #login-page form input[type="submit"]:hover {
+    color: rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+
+
+
+
+/* Main Page */
+#main-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+#users-page,
+#cats-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+#add-product-page,
+#orders-page,
+#comments-page,
+#products-page,
+#edit-product-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#main-page h1 {
+    color: white;
+    margin-left: 7vw;
+}
+#products-page h1,
+#users-page h1,
+#cats-page h1,
+#comments-page h1,
+#add-product-page h1,
+#orders-page h1,
+#edit-product-page h1 {
+    color: white;
+}
+#main-page div,
+#products-page div,
+#users-page div,
+#cats-page div,
+#comments-page > div,
+#add-product-page div,
+#orders-page > div,
+#edit-product-page div {
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5vw;
+    padding-left: 2vw;
+    border-left: 1px solid gray;
+}
+#main-page div ul,
+#products-page div ul,
+#users-page div ul,
+#cats-page div ul,
+#comments-page div ul,
+#add-product-page div ul
+#orders-page div ul,
+#edit-product-page div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#main-page div ul li,
+#products-page div ul li,
+#users-page div ul li,
+#cats-page div ul li,
+#comments-page div ul li,
+#add-product-page div ul li,
+#orders-page div ul li,
+#edit-product-page div ul li {
+    text-align: left;
+    padding: 2vh 0;
+    min-width: 5vw;
+}
+#main-page div ul a,
+#products-page div ul a,
+#users-page div ul a,
+#cats-page div ul a,
+#comments-page div ul a,
+#add-product-page div ul a,
+#orders-page div ul a,
+#edit-product-page div ul a {
+    color: white;
+    text-align: left;
+    transition: all .3s linear;
+}
+#main-page div ul a:hover,
+#products-page div ul a:hover,
+#users-page div ul a:hover,
+#cats-page div ul a:hover,
+#comments-page div ul a:hover,
+#add-product-page div ul a:hover,
+#orders-page div ul a:hover,
+#edit-product-page div ul a:hover {
+    color: rgb(250, 202, 103);
+}
+#main-page .content,
+#products-page .content,
+#users-page .content,
+#cats-page .content,
+#comments-page .content,
+#add-product-page .content,
+#orders-page .content,
+#edit-product-page .content {
+    color: rgb(128, 118, 118);
+}
+#cats-page .content,
+#comments-page .content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#orders-page .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid gray;
+}
+#orders-page .content .order-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    border: 0;
+}
+#orders-page .content .order-item .order-id {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#orders-page .content .order-item .order-id > * {
+    margin: .3rem;
+}
+#orders-page .content .order-item > * {
+    margin-top: 5vh;
+}
+#orders-page .content .order-item table tbody tr th {
+    border-bottom: 1px solid gray;
+}
+#add-product-page .content,
+#edit-product-page .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#add-product-page .content form,
+#edit-product-page .content form {
+    display: flex;
+    flex-direction: column;
+}
+#add-product-page .content form > *,
+#edit-product-page .content form > *{
+    margin-top: 1vh;
+}
+#cats-page .content div form input,
+#add-product-page .content form input,
+#edit-product-page .content form input {
+    padding: .5rem 1rem;
+    background-color: black;
+    outline: none;
+    color: white;
+    border: 1px solid gray;
+    border-radius: .5rem;
+}
+#add-product-page .content form select,
+#edit-product-page .content form select {
+    background-color: black;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    color: white;
+    padding: .7rem;
+}
+#add-product-page .content form textarea,
+#edit-product-page .content form textarea {
+    background-color: black;
+    border: 1px solid gray;
+    padding: .3rem .7rem;
+    color: white;
+    outline: none;
+}
+#cats-page .content div form input[type="text"] {
+    width: 75% !important;
+}
+#cats-page .content div form input[type="submit"]
+#add-product-page .content form input[type="submit"],
+#edit-product-page .content form input[type="submit"] {
+    padding: .5rem 1rem;
+    background-color: black;
+    outline: none;
+    color: white;
+    margin-top: 5vh;
+    transition: all .5s linear;
+}
+#cats-page .content div form input[type="submit"]:hover,
+#add-product-page .content form input[type="submit"]:hover {
+    border: 1px solid rgb(250, 202, 103);
+    color: rgb(250, 202, 103);
+}
+#cats-page .content .success-message,
+#cats-page .content .error-message {
+    display: none !important;
+}
+#comments-page .content .comment-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#comments-page .content .comment-item > div {
+    margin: 1vh 1vw;
+}
+#comments-page .content .comment-item .comment-answer form textarea {
+    padding: .4rem .7rem;
+    background-color: black;
+    border: 1px solid gray;
+    color: white;
+    outline: none;
+    margin-bottom: 2vh;
+}
+#comments-page .content .comment-item .comment-answer form input[type="submit"] {
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    padding: .3rem .7rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+#comments-page .content .comment-item .comment-answer form input[type="submit"]:hover {
+    color: rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+#comments-page .content .comment-item .comment-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#comments-page .content .comment-item .comment-buttons a{
+    color: gray;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    padding: .3rem .7rem;
+    margin: .5rem;
+    transition: all .4s ease-in-out;
+}
+#comments-page .content .comment-item .comment-buttons a:hover {
+    color:rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+#products-page .content table,
+#users-page .content table,
+#cats-page .content table,
+#orders-page .content table {
+    width: 30vw;
+    text-align: left;
+}
+#products-page .content table thead tr th,
+#users-page .content table thead tr th,
+#cats-page .content table thead tr th,
+#orders-page .content table thead tr th {
+    border-bottom: 1px solid gray;
+    color: rgb(250, 202, 103);
+}
+#products-page .content table tr,
+#users-page .content table tr,
+#cats-page .content table tr,
+#orders-page .content table tr {
+    color: white;
+}
+#products-page .content table tr td a,
+#users-page .content table tr td a,
+#cats-page .content table tr td a {
+    color: gray;
+    transition: all .2s linear;
+}
+#products-page .content table tr td a:hover,
+#users-page .content table tr td a:hover,
+#cats-page .content table tr td a:hover {
+    color: rgb(250, 202, 103);
+}
+@media screen and (max-width: 460px) {
+    #products-page,
+    #users-page,
+    #cats-page,
+    #add-product-page,
+    #comments-page,
+    #orders-page,
+    #edit-product-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 200vh;
+    }
+    #comments-page div,
+    #orders-page div {
+        border: 0 !important;
+    }
+    #products-page div,
+    #users-page div,
+    #cats-page div,
+    #add-product-page div,
+    #comments-page div,
+    #orders-page div,
+    #edit-product-page div {
+        margin: 10vh 5vw;
+    }
+}

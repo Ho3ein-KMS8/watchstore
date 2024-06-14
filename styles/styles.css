@@ -1,0 +1,742 @@
+/* General Styles */
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/RobotoCondensed-Bold.ttf');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/header-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    position: fixed;
+    background: black;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+header nav .logo-menu {
+    display: flex;
+    align-items: center;
+}
+header nav .logo-menu img {
+    width: 5rem;
+    cursor: pointer;
+}
+header nav .logo-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+header nav .logo-menu ul li {
+    padding: .8rem;
+}
+header nav .logo-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+header nav .logo-menu ul li a:hover {
+    color: rgb(250, 202, 103);
+}
+@media screen and (max-width: 460px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    header nav .logo-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4vh;
+        width: 100%;
+    }
+    header nav .logo-menu ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav .logo-menu ul li a {
+        font-size: 4vw;
+    }
+}
+
+
+/* Description1 */
+header .description1 {
+    width: 20rem;
+    margin-left: 10vw;
+    margin-top: 23vh;
+}
+header .description1 h1 {
+    color: white;
+    font-size: 3rem;
+}
+header .description1 p {
+    color: white;
+    font-size: 1.3rem;
+}
+@media screen and (max-width: 400px) {
+    header .description1 {
+        margin-top: 30vh;
+    }
+}
+@media screen and (max-width: 360px) {
+    header .description1 {
+        width: 80vw;
+    }
+}
+
+
+/* Description2 */
+main .our-store {
+    background-image: url('../images/store-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: start;
+}
+main .our-store .description2 {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10vw;
+    margin-top: 15vh;
+}
+main .our-store .description2 h1 {
+    color: white;
+    font-size: 3rem;
+}
+main .our-store .description2 p {
+    color: white;
+    font-size: 1.3rem;  
+}
+@media screen and (max-width: 360px) {
+    main .our-store .description2 {
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+}
+
+/* Products */
+main {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main div {
+    color: white;
+}
+main h2 {
+    color: white;
+    font-size: 8vw;
+    padding: 0;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+main a {
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 1rem;
+    margin-bottom: 5vh;
+    border-radius: .7rem;
+    color: white;
+    transition: all .4s linear;
+}
+main a:hover {
+    color: rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+main section .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 2rem;
+    width: 20vw;
+    height: 50vh;
+    border: 1px solid rgb(89, 87, 83);
+    border-radius: 1rem;
+    transition: all .3s linear;
+}
+main section .card:hover {
+    cursor: pointer;
+    border: 1px solid rgb(250, 202, 103);
+}
+main section .card img {
+    width: 100%;
+    object-fit: scale-down;
+    height: 50%;
+    border-radius: 1rem;
+}
+main section .card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main section .card div p {
+    color: white;
+    margin: 1rem 0;
+    text-align: center;
+}
+main section .card div a {
+    margin-top: .4rem;
+    outline: 0;
+    border: 1px solid black;
+    border-top-right-radius: .4rem;
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: .2rem .5rem;
+    color: white;
+    background-color: black;
+    transition: all .3s linear;
+    font-size: 1rem;
+}
+main section .card div a:hover {
+    border: 1px solid rgb(250, 202, 103);
+    border-bottom: 1px solid black;
+    color: rgb(250, 202, 103);
+}
+@media screen and (max-width: 580px) {
+    main section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main section .card {
+        width: 60vw;
+    }
+}
+
+
+/* Single Product */
+main .product-page .single-product {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+main .product-page .prodsection .single-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 20vh 0;
+    border-radius: 1rem;
+}
+main .product-page .prodsection .single-product img {
+    width: 70%;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 3vh;
+}
+main .product-page .prodsection .single-product div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .product-page .prodsection .single-product div h1,
+main .product-page .prodsection .single-product div p {
+    color: #fff;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+main .product-page .prodsection .single-product div a {
+    background: #000;
+    color: #fff;
+    outline: none;
+    border: 1px solid #908282;
+    padding: .8rem 1rem;
+    border-radius: .7rem;
+    transition: all .4s linear;
+}
+main .product-page .prodsection .single-product div a:hover {
+    color: rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+@media screen and (max-width: 400px) {
+    #main .product-page .prodsection .single-product {
+        margin-top: 5vh;
+    }
+}
+
+
+/* Comment */
+main .product-page .comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+main .product-page .comments .comments-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+main .product-page .comments .comments-list .comment {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid gray;
+    border-radius: 1rem;
+    width: 50%;
+    margin-left: 7vw;
+    margin-top: 2vh;
+}
+main .product-page .comments .comments-list .comment .user-image {
+    width: 3vw;
+}
+main .product-page .comments .comments-list .comment .user-image img {
+    width: 100%;
+    border-radius: 50%;
+    margin: .5rem;
+}
+main .product-page .comments .comments-list .comment .comment-username {
+    color: white;
+    background-color: black;
+    padding: .5rem;
+}
+main .product-page .comments .comments-list .comment .comment-text {
+    padding: 1vw 3vw;
+    background-color: black;
+    color: white;
+    border-top: 1px solid gray;
+}
+main .product-page .comments .comments-list .comment .comment-answer {
+    padding: 1vw 5vw;
+    background-color: gray;
+    border: 5px solid rgb(250, 202, 103);
+    color: white;
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+}
+form {
+    width: 100%;
+    background-color: black;
+}
+input::placeholder,
+textarea::placeholder {
+    font-family: sans-serif;
+}
+main .product-page .comments section form .contact-form,
+.login-page form .contact-form,
+.register-page form .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+main .product-page .comments section form .contact-form h1,
+.login-page form .contact-form h1,
+.register-page form .contact-form h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+main .product-page .comments section form .contact-form .inp,
+.login-page form .contact-form .inp,
+.register-page form .contact-form .inp {
+    width: 70%;
+    margin: .7rem auto;
+    padding: .3rem .8rem;
+    outline: none;
+    border-radius: .5rem;
+    border: 2px solid gray;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 2.5rem;
+}
+main .product-page .comments section form  .contact-form .inp:focus,
+textarea:focus {
+    border: 2px solid rgb(250, 202, 103);
+}
+main .product-page .comments section form .text_area {
+    width: 70%;
+    margin: .7rem auto;
+    padding: .7rem .8rem;
+    outline: none;
+    border-radius: .5rem;
+    border: 2px solid gray;
+}
+main .product-page .comments section form .submit-btn,
+.login-page form .contact-form .submit-btn,
+.register-page form .contact-form .submit-btn {
+    width: 74%;
+    margin: .8rem 0;
+    padding: 1rem 0;
+    outline: none;
+    border-radius: .5rem;
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+    transition: all .3s linear;
+}
+main .product-page .comments section form .submit-btn:hover,
+.login-page form .contact-form .submit-btn:hover,
+.register-page form .contact-form .submit-btn:hover {
+    border: 1px solid rgb(250, 202, 103);
+    color: rgb(250, 202, 103);
+    cursor: pointer;
+    box-shadow: rgb(250, 202, 103) 0px 0px 5px 2px;
+}
+
+
+/* About */
+#about section {
+    width: 50%;
+    margin-bottom: 10vh;
+}
+#about section p {
+    color: white;
+}
+
+
+/* Login & Register */
+.login-page,
+.register-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-page .note,
+.register-page .note {
+    color: white;
+}
+.login-page .note a,
+.register-page .note a{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+.login-page .note a:hover,
+.register-page .note a:hover {
+    color: rgb(250, 202, 103);
+}
+
+
+
+/* Message */
+.success-message,
+.error-message {
+    font-size: 1.7rem !important;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+
+
+/* cart */
+#cart .content .cart .login-or-register {
+    margin: 5vh 0;
+}
+#cart .content .cart .login-or-register a{
+    border: 0;
+    color: gray;
+}
+#cart .content .cart .login-or-register a:hover {
+    color: rgb(250, 202, 103);
+}
+#cart .content .cart .user-info table tr:first-child {
+    color: white;    
+}
+#cart .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cart .content .cart {
+    width: 100%;
+}
+#cart .content .cart h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+#cart .content table {
+    width: 100%;
+    border-bottom: 0;
+    margin: 5vh 0;
+}
+#cart .content table tr {
+    text-align: center;
+    margin: 2vh 0;
+}
+#cart .content table tr:first-child {
+    width: 100%;
+    color: rgb(250, 202, 103);
+}
+#cart .content table tr td {
+    font-size: 1rem;
+    border-top: 1px solid gray;
+}
+#cart .content table tr td a {
+    border: 0;
+    padding-top: 0;
+    margin: 0;
+}
+#cart .content .cart .cart-total {
+    background-color: black;
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 1rem;
+}
+#cart .content .cart form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cart .content .cart form input[type="submit"]{
+    margin: 5vh 0;
+    padding: 1vh 4vw;
+    background: none;
+    color: white;
+    outline: 0;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    transition: all .5s ease-in-out;
+}
+#cart .content .cart form input[type="submit"]:hover {
+    color: rgb(250, 202, 103);
+    border: 1px solid rgb(250, 202, 103);
+}
+
+
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-top: 2px solid rgb(73, 68, 68);
+    background: black;
+    padding: 5vh 0;
+}
+footer p {
+    color: white;
+    transition: all .5s ease-in-out;
+}
+footer p:hover {
+    color: rgb(250, 202, 103);
+}
+footer .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20vw;
+}
+footer .social-media img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border: 1px solid black;
+    transition: all .3s linear;
+    border-radius: 10%;
+}
+footer .social-media img:hover {
+    border: 1px solid rgb(250, 202, 103);
+    border-radius: 50%;
+}
+@media screen and (max-width: 640px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .social-media {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 5vh;
+    }
+}
+
+
+/* Profile */
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.profile .profile-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.profile .profile-box .profile-info {
+    width: 80%;
+}
+.profile .profile-box .profile-info .user-image {
+    width: 18rem;
+    height: 18rem;
+}
+.profile .profile-box .profile-info .user-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+    object-fit: cover;
+}
+.profile .profile-box .profile-info .user-info {
+    width: 100%;
+}
+.profile .profile-box .profile-info .user-info ul {
+    list-style: none;
+    padding: 1vh 0;
+}
+.profile #sidebar .sidebar-item,
+.order-page #sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile #sidebar .sidebar-item ul,
+.order-page #sidebar .sidebar-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border: 1px solid gray;
+    border-radius: .4rem;
+}
+.profile #sidebar .sidebar-item ul li, 
+.order-page #sidebar .sidebar-item ul li {
+    padding: .3rem;
+}
+.profile #sidebar .sidebar-item ul li a,
+.order-page #sidebar .sidebar-item ul li a {
+    border: 0;
+}
+#orders .box {
+    margin-bottom: 10vh;
+}
+.order-page #sidebar {
+    margin: 10vh 0;
+}
+.order-page .box {
+    border: 1px solid gray;
+    border-radius: .4rem;
+}
+.order-page .box .order-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.order-page .box .order-item table{
+    margin-top: 4vh;
+    border-top: 1px solid gray;
+}
+
+.order-page .box .order-item form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.order-page .box .order-item .order-id-not-paid .not-paid {
+    margin: 2vh 0;
+}
+.order-page .box .order-item table tbody tr th {
+    padding: 1vh 5vw;
+    padding-left: 0;
+}
+
+
+
+
+/* Edit profile */
+#editprofile {
+    width: 100%;
+}
+#editprofile .box {
+    margin-bottom: 10vh;
+}
+#editprofile .box .update-profile form {
+    display: flex;
+    flex-direction: column;
+}
+#editprofile .box .update-profile form > * {
+    background: black;
+    color: white;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: .3rem;
+    padding: .4rem;
+    margin: .5rem 0;
+}
+#editprofile .box .update-profile form input[type="submit"] {
+    transition: all .4s linear;
+}
+#editprofile .box .update-profile form input[type="submit"]:hover {
+    border: 1px solid rgb(250, 202, 103);
+    color: rgb(250, 202, 103);
+}
+#editprofile .box .update-profile form .profile-span {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
